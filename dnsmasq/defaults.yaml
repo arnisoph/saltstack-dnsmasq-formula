@@ -1,0 +1,8 @@
+{% load_yaml as rawmap %}
+Debian:
+  pkgs:
+    - dnsmasq
+  config:
+    dnsmasq: {}
+  service: {}
+{% endload %}
