@@ -6,10 +6,7 @@
 dnsmasq:
   pkg:
     - installed
-    - pkgs:
-{% for p in datamap.pkgs %}
-      - {{ p }}
-{% endfor %}
+    - pkgs: {{ datamap.pkgs }}
   service:
     - {{ datamap.ensure|default('running') }}
     - name: {{ datamap.service.name|default('dnsmasq') }}
